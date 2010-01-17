@@ -11,7 +11,7 @@ def smr_bind
 end
 
 hostname = '172.16.6.166'
-port = 9001
+port = 9000
 
 s = TCPSocket.open(hostname, port)
 
@@ -25,7 +25,7 @@ s.write(buffer)
 
 print "written\n"
 
-reply = s.read()
+reply = s.read(512)
 
 print "read\n"
 
